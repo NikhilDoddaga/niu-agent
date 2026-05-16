@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NIU AI Student Success Agent | The College App</title>
+    <meta
+      name="description"
+      content="Leadership demo for a university-branded AI student success agent for Northern Illinois University."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero demo-hero" aria-labelledby="page-title">
+        <div class="hero-panel demo-panel">
+          <header class="topbar">
+            <div class="brand-lockup">
+              <div class="brand-mark" aria-hidden="true">NIU</div>
+              <div>
+                <p class="eyebrow">The College App AI Agent Demo</p>
+                <p class="brand-subtitle">Side-by-side NIU student support comparison</p>
+              </div>
+            </div>
+            <nav class="quick-nav" aria-label="Page sections">
+              <a href="#comparison">Demo</a>
+            </nav>
+          </header>
+
+          <div class="hero-grid demo-intro-grid">
+            <div class="hero-copy">
+              <h1 id="page-title">A smarter NIU AI agent students can trust.</h1>
+              <p class="hero-lede">
+                A focused side-by-side demo showing how The College App AI Agent can
+                answer NIU student questions with richer detail, clearer next steps,
+                and source-backed information.
+              </p>
+              <div class="hero-actions" aria-label="Primary actions">
+                <a class="button primary" href="#comparison">
+                  View answer comparison
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section comparison-section" id="comparison" aria-labelledby="comparison-title">
+        <div class="section-heading">
+          <p class="eyebrow">Live Demo Concept</p>
+          <h2 id="comparison-title">Same student question. Different level of usefulness.</h2>
+          <p>
+            These examples show how The College App agent can move beyond short links
+            and uncertain suggestions by using NIU-approved retrieval, citations, and
+            student-specific next steps.
+          </p>
+        </div>
+
+        <div class="scenario-tabs" role="tablist" aria-label="Example questions">
+          <button class="scenario-tab active" type="button" data-scenario="entrepreneurship" role="tab">
+            Student Resources
+          </button>
+          <button class="scenario-tab" type="button" data-scenario="scholarships" role="tab">
+            Scholarships
+          </button>
+          <button class="scenario-tab" type="button" data-scenario="careers" role="tab">
+            Career Services
+          </button>
+          <button class="scenario-tab" type="button" data-scenario="honorsHousing" role="tab">
+            Housing
+          </button>
+          <button class="scenario-tab" type="button" data-scenario="academicSupport" role="tab">
+            Academic Support
+          </button>
+          <button class="scenario-tab" type="button" data-scenario="tuitionPayments" role="tab">
+            Tuition Payments
+          </button>
+        </div>
+
+        <article class="question-card" aria-live="polite">
+          <div>
+            <p class="label">Student question</p>
+            <h3 id="scenario-question"></h3>
+          </div>
+          <div class="student-chip">
+            <span aria-hidden="true">N</span>
+            <div>
+              <strong>Nikhil</strong>
+              <small>Incoming / current NIU student</small>
+            </div>
+          </div>
+        </article>
+
+        <div class="answer-grid">
+          <article class="answer-card baseline">
+            <div class="answer-header">
+              <div>
+                <p class="label">Current chatbot pattern</p>
+                <h3>Mission AI style response</h3>
+              </div>
+              <span class="score muted">General</span>
+            </div>
+            <div class="response-body" id="mission-response"></div>
+          </article>
+
+          <article class="answer-card enhanced">
+            <div class="answer-header">
+              <div>
+                <p class="label">Proposed NIU agent</p>
+                <h3>The College App AI Agent</h3>
+              </div>
+              <span class="score">Source-backed</span>
+            </div>
+            <div class="response-body rich-response" id="college-response"></div>
+            <div class="references">
+              <p class="label">Retrieved sources</p>
+              <div id="reference-list"></div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
